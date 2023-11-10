@@ -1,8 +1,8 @@
 <div class="tweet-nav mb-3">
     <!-- TODO: usersのIDと tweetsのIDを送信 -->
     <form action="like.php" method="post">
-        <input type="submit" name="users_id" value="<?= $user['id'] ?>">
-        <input type="submit" name="tweet_id" value="<?= $tweet['id'] ?>">
+        <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
+        <input type="hidden" name="tweet_id" value="<?= $tweet['id'] ?>">
 
         <?php if (in_array($tweet['id'], $user_likes)) : ?>
             <button class="btn btn-sm"><img src="../images/svg/heart_active.svg"></button>
